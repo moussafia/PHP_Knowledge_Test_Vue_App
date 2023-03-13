@@ -13,7 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
+body {
+	background-color: #271c36;
+	color: #FFF;
+}
 a {
   font-weight: 500;
   color: #646cff;
@@ -69,7 +72,7 @@ button:focus-visible {
 }
 
 #app {
-  max-width: 1280px;
+  width:100%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -87,3 +90,6 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

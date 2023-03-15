@@ -19,8 +19,7 @@
             <div class="cursor-pointer shadow-lg rounded-lg py-10 px-10 btn text-white bg-primary
                 hover:text-slate-200 hover:bg-scondary  transition ease-out duration-500"
                 v-for="(answer,index) in quizz[i].answers" :key="index" 
-                @click="checkUserAnswer(index)" :class="isClicked? 'bg-blue-400' : ''"
-                >{{answer}}</div>
+                @click="checkUserAnswer($event,index)">{{answer}}</div>
           
         </div>
     </div>
@@ -40,7 +39,6 @@ export default {
     data(){
         return {
             isClicked: false,
-            btnClicked: ''
         }
     },
   computed: {
@@ -58,10 +56,11 @@ methods: {
     nextQuestion: function(){
         return this.$store.commit('nextQuestion')
     },
-    checkUserAnswer(index){
+    checkUserAnswer(event,index){
+        this.isClicked=!this.isClicked
+        this.isClicked?event.target.classList.add('bg-scondary'):''
         if(index===this.quizz[this.i].trueAnswer){
-            this.$set(this.quizz[this.i].answers[index], 'selected', !this.quizz[this.i].answers[index].selected)
-            div.selected.classList.add('')
+           
   }
         }
     }

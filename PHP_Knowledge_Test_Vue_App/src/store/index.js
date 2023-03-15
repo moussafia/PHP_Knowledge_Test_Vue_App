@@ -51,6 +51,12 @@ const store=createStore({
         nextQuestion (state) {
             state.i+=1;
         },
+        correctAnswer(state){   
+           state.score++ ;
+        },
+        progressQuestion(state){
+           state.progress=((state.i+1)/(state.quizz.length-1))*100;
+        }
        
     }
 })

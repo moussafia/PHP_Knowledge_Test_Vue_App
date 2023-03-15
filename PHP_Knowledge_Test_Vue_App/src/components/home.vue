@@ -1,5 +1,6 @@
 <template>
-    <div class="px-10">
+    <div>
+        <div class="px-10">
         <div class="shadow-lg bg-primary rounded-lg">
             <div class="flex justify-center">
                 <p class="text-center py-9 whitespace-normal px-10">
@@ -20,6 +21,6 @@
         <button class="w-96 h-12 px-10 btn text-white border-primary md:border-2 hover:bg-primary 
                 hover:text-blue-400 transition ease-out duration-500 uppercase">Get started</button></router-link>
     </div>
-
-
+    </div>
 </template>
+
